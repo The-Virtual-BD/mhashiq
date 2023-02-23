@@ -5,7 +5,7 @@
             <h2 class="font-medium font-mont text-nightblue text-base uppercase">Volunteering Experience</h2>
             <h1 class="invisible">Volunteering Experience</h1>
         </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
             @foreach ($vexperiences as $vexperience)
             <div class="bg-white p-5 shadow rounded-md text-nightblue font-medium mt-5">
