@@ -11,6 +11,10 @@ module.exports = {
 
     theme: {
         extend: {
+            listStyleType: {
+                square: 'square',
+                roman: 'upper-roman',
+              },
             colors: {
                 'nightblue': '#003049',
                 'norblue': '#1E3A8A',
