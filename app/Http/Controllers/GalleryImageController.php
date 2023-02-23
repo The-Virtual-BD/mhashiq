@@ -8,7 +8,7 @@ use App\Http\Requests\UpdateGalleryImageRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Redirect;
-use Intervention\Image\Facades\Image;
+// use Intervention\Image\Facades\Image;
 
 class GalleryImageController extends Controller
 {
