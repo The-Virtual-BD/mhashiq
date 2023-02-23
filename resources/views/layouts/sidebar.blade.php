@@ -15,12 +15,24 @@
         <div class="text-center">
             <p class="uppercase text-white ">{{$profile->designation}}</p>
             <p class="uppercase text-white font-bold ">{{$profile->first_name.' '.$profile->last_name}}</p>
+
+            @if ($profile->google_scolar || $profile->google_scolar)
+
+            <div class="text-white flex justify-center items-center text-2xl gap-3 mt-4">
+                <a href="{{$profile->research_gate}}" target="_blank">
+                    <img src="{{asset('rg.png')}}" alt="" srcset="" class="w-6 h-auto">
+                </a>
+                <a href="{{$profile->google_scolar}}" target="_blank">
+                    <img src="{{asset('gs.png')}}" alt="" srcset="" class="w-6 h-auto">
+                </a>
+            </div>
+            @endif
             <div class="text-white text-center mt-5 sm:hidden">
                 {!!$profile->bio_mini!!}
             </div>
             <div class="flex sm:hidden justify-center items-center gap-5 mt-5">
-                <a href="tel:+5511981724236" class="w-8 bg-white/25 text-white aspect-square flex justify-center items-center rounded-full"><span class="iconify text-xl" data-icon="ic:baseline-local-phone"></span></a>
-                <a href="mailto:somepoorswine@poomail.poo" class="w-8 bg-white/25 text-white aspect-square flex justify-center items-center rounded-full"><span class="iconify text-xl" data-icon="mdi:email-outline"></span></a>
+                <a href="tel:{{$profile->phone}}" class="w-8 bg-white/25 text-white aspect-square flex justify-center items-center rounded-full"><span class="iconify text-xl" data-icon="ic:baseline-local-phone"></span></a>
+                <a href="mailto:{{$profile->email}}" class="w-8 bg-white/25 text-white aspect-square flex justify-center items-center rounded-full"><span class="iconify text-xl" data-icon="mdi:email-outline"></span></a>
             </div>
 
 
@@ -71,9 +83,14 @@
 
         </div>
         <a href="{{$profile->cv}}">
-
             <button class="bg-white rounded-md w-full mt-10 uppercase text-nightblue py-2 hover:scale-105 hover:shadow-lg transition ease-in-out duration-150">Download CV</button>
         </a>
+        @auth
+        <form action="{{route('logout')}}" method="post">
+            @csrf
+            <button class="bg-white/40 rounded-md w-full mt-5 uppercase text-nightblue py-2 hover:scale-105 hover:shadow-lg transition ease-in-out duration-150 flex justify-center items-center"><span class="iconify  mr-2" data-icon="material-symbols:power-rounded-sharp"></span>Logout</button>
+        </form>
+        @endauth
     </div>
     <div class="block sm:hidden my-4 rounded-lg overflow-scroll shadow-md">
         <nav x-data="{ open: false }" class=" bg-white dark:bg-gray-800 px-2 w-full overflow-scroll flex">

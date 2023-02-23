@@ -7,5 +7,14 @@
         <x-nav-link :href="route('apublications.index')" :active="request()->routeIs('apublications.*')">
             {{ __('Manage Publications') }}
         </x-nav-link>
+        <x-nav-link :href="route('aprojects.index')" :active="request()->routeIs('aprojects.*')">
+            {{ __('Manage Projects') }}
+        </x-nav-link>
+        <x-nav-link :href="route('volunteerExperiences.index')" :active="request()->routeIs('volunteerExperiences.*')">
+            {{ __('Manage Vltr.Exp') }}
+        </x-nav-link>
+        <x-nav-link :href="route('galleryImages.index')" :active="request()->routeIs('galleryImages.*')">
+            {{ __('Manage Gallery') }}
+        </x-nav-link>
     </div>
 </div>

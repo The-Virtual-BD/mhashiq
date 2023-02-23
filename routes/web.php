@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GalleryImageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('apublications', PublicationController::class);
     Route::resource('aprojects', ProjectController::class);
     Route::resource('volunteerExperiences', VolunteerExperienceController::class);
+    Route::resource('galleryImages', GalleryImageController::class);
 });
 
 require __DIR__.'/auth.php';
