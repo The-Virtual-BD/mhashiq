@@ -2,9 +2,9 @@
     {{-- Bio --}}
     <div class="bg-white dark:bg-gray-800 shadow-md sm:rounded-lg font-quick p-5">
         <div class="flex">
-            <h2 class="font-medium font-mont text-nightblue text-base uppercase">Team</h2>
+            <h2 class="font-medium font-mont text-nightblue text-base uppercase">Collaboration Network</h2>
 
-            <h1 class="invisible">Team</h1>
+            <h1 class="invisible">Collaboration Network</h1>
         </div>
         <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
             @forelse ($members as $member)
