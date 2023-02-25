@@ -76,9 +76,11 @@
                 <a href="{{$profile->linkedin}}"><span class="iconify" data-icon="ph:linkedin-logo-fill"></span></a>
             </div>
         </div>
+        @if ($profile->cv)
         <a href="{{$profile->cv}}">
             <button class="bg-white rounded-md w-full mt-10 uppercase text-nightblue py-2 hover:scale-105 hover:shadow-lg transition ease-in-out duration-150">Download CV</button>
         </a>
+        @endif
         @auth
         <form action="{{route('logout')}}" method="post">
             @csrf
