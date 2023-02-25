@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GalleryImage;
+use App\Models\Member;
 use App\Models\Project;
 use App\Models\Publication;
 use App\Models\VolunteerExperience;
@@ -58,6 +59,10 @@ class HomeController extends Controller
         $images = GalleryImage::all();
         return view('volunteerex',compact('vexperiences','images'));
     }
-    public function colaboration() { return view('colaboration'); }
+    public function colaboration() {
+        $members = Member::all();
+
+        return view('colaboration',compact('members'));
+    }
     public function dashboard() { return view('dashboard.dashboard'); }
 }

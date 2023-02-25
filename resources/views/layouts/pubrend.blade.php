@@ -9,6 +9,7 @@
             <span>{{ $publication->publish_date }}</span>
             <span class="iconify" data-icon="octicon:dot-fill-24"></span>
             <span>{{ $publication->journal }}</span>
+            <span class="iconify" data-icon="octicon:dot-fill-24"></span>
             <span>{{ $publication->volume }}</span>
         </div>
         <div class="flex items-center gap-2 text-sm mt-2 text-midgray">
@@ -17,8 +18,11 @@
         </div>
 
         <div class="flex gap-4 text-sm mt-2 text-midgray">
+            @if ($publication->file)
             <a href="{{ $publication->file }}" class="flex items-center gap-2"><span class="iconify"
-                    data-icon="bi:file-earmark-pdf"></span>View PDF</a>
+                data-icon="bi:file-earmark-pdf"></span>View PDF</a>
+            @endif
+
             <a href="https://www.doi.org/{{ $publication->doi }}" class="flex items-center gap-2"><span
                     class="iconify text-yellow-500" data-icon="academicons:doi"></span>{{ $publication->doi }}</a>
         </div>

@@ -1,6 +1,6 @@
 <div class="bg-white mb-3 shadow rounded-md">
     <!-- Navigation Links -->
-    <div class="space-x-8 sm:-my-px sm:ml-10 sm:flex">
+    <div class="space-x-4 sm:-my-px sm:ml-10 sm:flex">
         <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.*')">
             {{ __('Profile') }}
         </x-nav-link>
@@ -15,6 +15,9 @@
         </x-nav-link>
         <x-nav-link :href="route('galleryImages.index')" :active="request()->routeIs('galleryImages.*')">
             {{ __('Manage Gallery') }}
+        </x-nav-link>
+        <x-nav-link :href="route('members.index')" :active="request()->routeIs('members.*')">
+            {{ __('Manage Team') }}
         </x-nav-link>
     </div>
 </div>

@@ -110,8 +110,14 @@ class GalleryImageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(GalleryImage $galleryImage): RedirectResponse
+    public function destroy( $id)
     {
-        //
+        $image = GalleryImage::findOrFail($id);
+        if($image->photo) { unlink($image->photo); }
+        $image->delete();
+
+        return Redirect::route('galleryImages.index')->with('status', 'Image Deleted');
+
+
     }
 }

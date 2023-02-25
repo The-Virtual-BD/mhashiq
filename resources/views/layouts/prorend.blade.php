@@ -10,7 +10,10 @@
     </div>
 
     <div class="flex gap-4 text-sm mt-2 text-midgray">
+        @if ($project->file)
+
         <a href="{{$project->file}}" class="flex items-center gap-2"><span class="iconify" data-icon="bi:file-earmark-pdf"></span>View PDF</a>
+        @endif
         <a href="{{$project->link}}" class="flex items-center gap-2"><span class="iconify" data-icon="material-symbols:file-present-outline"></span>{{$project->link}}</a>
     </div>
 </div>

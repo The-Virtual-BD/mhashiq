@@ -34,13 +34,10 @@
                 <a href="tel:{{$profile->phone}}" class="w-8 bg-white/25 text-white aspect-square flex justify-center items-center rounded-full"><span class="iconify text-xl" data-icon="ic:baseline-local-phone"></span></a>
                 <a href="mailto:{{$profile->email}}" class="w-8 bg-white/25 text-white aspect-square flex justify-center items-center rounded-full"><span class="iconify text-xl" data-icon="mdi:email-outline"></span></a>
             </div>
-
-
-
             <hr class="hidden sm:block my-5 border-dashed border-white/40">
             <div class="hidden sm:flex justify-center items-center space-x-2">
                 <span class="iconify text-[#A6CE39]" data-icon="simple-icons:orcid"></span>
-                <p class="text-white">{{$profile->orcid_id}}</p>
+                <a href="https://orcid.org/{{$profile->orcid_id}}" class="text-white underline" target="_blank">{{$profile->orcid_id}}</a>
             </div>
             <hr class="hidden sm:block my-5 border-dashed border-white/40">
             <div class="hidden sm:flex gap-2.5">
@@ -78,9 +75,6 @@
                 <a href="{{$profile->instagram}}"><span class="iconify" data-icon="ri:instagram-fill"></span></a>
                 <a href="{{$profile->linkedin}}"><span class="iconify" data-icon="ph:linkedin-logo-fill"></span></a>
             </div>
-
-
-
         </div>
         <a href="{{$profile->cv}}">
             <button class="bg-white rounded-md w-full mt-10 uppercase text-nightblue py-2 hover:scale-105 hover:shadow-lg transition ease-in-out duration-150">Download CV</button>
@@ -93,7 +87,7 @@
         @endauth
     </div>
     <div class="block sm:hidden my-4 rounded-lg overflow-scroll shadow-md">
-        <nav x-data="{ open: false }" class=" bg-white dark:bg-gray-800 px-2 w-full overflow-scroll flex">
+        <nav x-data="{ open: false }" class=" bg-white dark:bg-gray-800 px-2 w-full overflow-scroll flex space-x-4">
             <!-- Primary Navigation Menu -->
             <x-nav-link class="whitespace-nowrap" :href="route('about')" :active="request()->routeIs('about')">About</x-nav-link>
             <x-nav-link class="whitespace-nowrap" :href="route('publications')" :active="request()->routeIs('publications')">Publications</x-nav-link>

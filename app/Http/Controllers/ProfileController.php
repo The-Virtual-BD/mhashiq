@@ -41,9 +41,26 @@ class ProfileController extends Controller
         if ($request->linkedin) {$user->linkedin = $request->linkedin;}
         if ($request->research_gate) {$user->research_gate = $request->research_gate;}
         if ($request->google_scolar) {$user->google_scolar = $request->google_scolar;}
-        if ($request->aca_position) {$user->aca_position = $request->aca_position;}
-        if ($request->job_position) {$user->job_position = $request->job_position;}
-        if ($request->degrees) {$user->degrees = $request->degrees;}
+
+
+        if ($request->aca_position) {
+            $user->aca_position = $request->aca_position;
+        }else{
+            $user->aca_position = Null;
+        }
+        if ($request->job_position) {
+            $user->job_position = $request->job_position;
+        }else{
+            $user->job_position = Null;
+        }
+        if ($request->degrees) {
+            $user->degrees = $request->degrees;
+        }else{
+            $user->degrees = Null;
+        }
+
+
+        // Extras
         if ($request->extra_one) {$user->extra_one = $request->extra_one;}
         if ($request->extra_two) {$user->extra_two = $request->extra_two;}
         if ($request->extra_three) {$user->extra_three = $request->extra_three;}
