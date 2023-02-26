@@ -26,7 +26,7 @@
 
 
                     @include('layouts.sidebar')
-                    <div class="col-span-3">
+                    <div class="col-span-3 relative">
                         {{ $slot }}
                     </div>
                 </div>

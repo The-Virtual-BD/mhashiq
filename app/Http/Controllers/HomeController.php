@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function about() { return view('about'); }
     // Publications
     public function publications(Request $request) {
-        $publications = Publication::paginate(4);
+        $publications = Publication::orderBy('publish_date', 'DESC')->paginate(4);
         if ($request->ajax()) {
             if ($request->sort == 1) {
                 $publications = Publication::orderBy('title')->where('category', 'LIKE', '%'.$request->search.'%')->paginate(4);

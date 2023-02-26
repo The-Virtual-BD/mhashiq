@@ -22,7 +22,14 @@ class StorePublicationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'category' => 'required',
+            'title' => 'required',
+            'journal' => 'required',
+            'volume' => 'required',
+            'publish_date' => 'required',
+            'authors' => 'required',
+            'file' => 'nullable',
+            'doi' => 'required',
         ];
     }
 }

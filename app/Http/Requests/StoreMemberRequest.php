@@ -22,7 +22,10 @@ class StoreMemberRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required',
+            'photo' => 'required',
+            'designation' => 'required',
+            'bio' => 'required'
         ];
     }
 }

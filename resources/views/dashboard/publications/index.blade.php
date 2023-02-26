@@ -32,6 +32,7 @@
                     <span>{{$publication->publish_date}}</span>
                     <span class="iconify" data-icon="octicon:dot-fill-24"></span>
                     <span>{{$publication->journal}}</span>
+                    <span class="iconify" data-icon="octicon:dot-fill-24"></span>
                     <span>{{$publication->volume}}</span>
                 </div>
                 <div class="flex items-center gap-2 text-sm mt-2 text-midgray">

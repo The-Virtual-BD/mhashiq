@@ -22,6 +22,11 @@ class StoreProjectRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'title' => 'required',
+            'event_date' => 'required',
+            'volunteers' => 'required',
+            'file' => 'nullable',
+            'link' => 'required',
         ];
     }
 }

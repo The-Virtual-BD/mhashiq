@@ -22,7 +22,11 @@ class StoreVolunteerExperienceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'logo' => 'required',
+            'designation' => 'required',
+            'org_name' => 'required',
+            'start' => 'required',
+            'end' => 'required',
         ];
     }
 }

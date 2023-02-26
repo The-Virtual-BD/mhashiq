@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class VolunteerExperience extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['logo','designation','org_name','start','end'];
 }

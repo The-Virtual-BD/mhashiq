@@ -13,8 +13,8 @@
         <div class="mt-4">
 
             @forelse ($members as $member)
-            <div class="flex items-center rounded-md p-4 shadow-md gap-5">
-                <div class="bg-white w-24 aspect-square rounded-full bg-no-repeat bg-cover bg-center shadow" style="background-image: url('{{ asset($member->photo) }}')"></div>
+            <div class="flex items-start rounded-md p-4 shadow-md gap-5">
+                <div class="bg-white w-24 aspect-square rounded-full bg-no-repeat bg-cover bg-center shadow" style="background-image: url('{{ asset($member->photo) }}');min-width:96px !important;"></div>
                 <div class="">
                     <h3 class="font-quick font-medium text-nightblue">{{$member->name}}</h3>
                     <p class="text-midgray">{{$member->designation}}</p>

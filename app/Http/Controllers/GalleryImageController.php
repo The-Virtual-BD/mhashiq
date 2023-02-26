@@ -8,7 +8,6 @@ use App\Http\Requests\UpdateGalleryImageRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Redirect;
-// use Intervention\Image\Facades\Image;
 
 class GalleryImageController extends Controller
 {
@@ -35,7 +34,7 @@ class GalleryImageController extends Controller
     public function store(StoreGalleryImageRequest $request)
     {
         $this->validate($request, [
-            'image' => 'required|mimes:jpg,jpeg,png,jpg,gif,svg',
+            'image' => 'required|mimes:jpeg,png,jpg,gif,svg',
         ]);
 
         if ($request->hasFile('image')) {
