@@ -10,7 +10,7 @@
                 <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6">
                         <label for="image" class="block text-sm font-medium text-gray-700">Upload Image</label>
-                        <input type="file" name="image" id="image" autocomplete="address-level2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm  text-sm text-nightblue border cursor-pointer file:bg-nightblue file:border-0 file:text-white file:h-full file:uppercase h-10">
+                        <input type="file" name="image" id="image" autocomplete="address-level2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm  text-sm text-nightblue border cursor-pointer file:bg-nightblue file:border-0 file:text-white file:h-full file:uppercase h-10" required>
                     </div>
                 </div>
             </div>
