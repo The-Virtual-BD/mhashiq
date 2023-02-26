@@ -33,28 +33,19 @@ class GalleryImageController extends Controller
      */
     public function store(StoreGalleryImageRequest $request)
     {
-        $this->validate($request, [
-            'image' => 'required|mimes:jpeg,png,jpg,gif,svg',
-        ]);
+        $galleryImage = new GalleryImage();
 
-        if ($request->hasFile('image')) {
-
-            $galleryImage = new GalleryImage();
-
+        if ($request->image) {
             $file = $request->file('image');
             $filefullname = time() . '.' . $file->getClientOriginalExtension();
-            $upload_path = 'gallery/';
+            $upload_path = 'images/gallery/';
             $fileurl = $upload_path . $filefullname;
             $success = $file->move($upload_path, $filefullname);
-
             $galleryImage->photo = $fileurl;
             $galleryImage->thumbnail = $fileurl;
-            $galleryImage->save();
-
-            return Redirect::route('galleryImages.index')->with('success', 'Image Upload successful');
         }
-
-        return back();
+        $galleryImage->save();
+        return Redirect::route('galleryImages.index')->with('success', 'Image Upload successful');
     }
 
     /**
