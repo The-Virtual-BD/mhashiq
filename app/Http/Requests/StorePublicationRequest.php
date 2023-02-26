@@ -23,9 +23,9 @@ class StorePublicationRequest extends FormRequest
     {
         return [
             'category' => 'required',
-            'title' => 'required',
             'journal' => 'required',
-            'volume' => 'required',
+            'title' => 'required',
+            'volume' => 'nullable',
             'publish_date' => 'required',
             'authors' => 'required',
             'file' => 'nullable',

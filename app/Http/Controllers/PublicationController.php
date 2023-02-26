@@ -39,8 +39,11 @@ class PublicationController extends Controller
         $publication->category = $request->category;
         $publication->title = $request->title;
         $publication->journal = $request->journal;
-        $publication->volume = $request->volume;
-        $publication->publish_date = $request->date;
+        if ($request->volume) {
+            # code...
+            $publication->volume = $request->volume;
+        }
+        $publication->publish_date = $request->publish_date;
         $publication->authors = $request->authors;
         $publication->doi = $request->doi;
 
@@ -83,8 +86,10 @@ class PublicationController extends Controller
         $publication->category = $request->category;
         $publication->title = $request->title;
         $publication->journal = $request->journal;
-        $publication->volume = $request->volume;
-        $publication->publish_date = $request->date;
+        if ($request->volume) {
+            $publication->volume = $request->volume;
+        }
+        $publication->publish_date = $request->publish_date;
         $publication->authors = $request->authors;
         $publication->doi = $request->doi;
 

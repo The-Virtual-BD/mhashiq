@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('category');
             $table->longText('title');
             $table->string('journal');
-            $table->string('volume');
+            $table->string('volume')->nullable();
             $table->date('publish_date');
             $table->string('authors');
             $table->string('file')->nullable();

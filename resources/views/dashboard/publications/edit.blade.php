@@ -31,14 +31,14 @@
 
 
                     <div class="col-span-6 sm:col-span-3">
-                        <label for="date" class="block text-sm font-medium text-gray-700">Publish Date</label>
-                        <input type="date" name="date" id="date" autocomplete="email"
+                        <label for="publish_date" class="block text-sm font-medium text-gray-700">Publish Date</label>
+                        <input type="date" name="publish_date" id="publish_date" autocomplete="email"
                             class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm" value="{{$publication->publish_date}}">
                     </div>
                     <div class="col-span-6 sm:col-span-3">
                         <label for="volume" class="block text-sm font-medium text-gray-700">Volume</label>
                         <input type="text" name="volume" id="volume" autocomplete="email"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm" value="{{$publication->volume}}">
+                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm" value="{{$publication->volume ? $publication->volume :''}}">
                     </div>
 
                     <div class="col-span-6">
