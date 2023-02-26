@@ -2,9 +2,9 @@
     {{-- Bio --}}
     <div class="bg-white dark:bg-gray-800 shadow-md sm:rounded-lg font-quick p-5">
         <div class="flex">
-            <h2 class="font-medium font-mont text-nightblue text-base uppercase">Collaboration Network</h2>
+            <h2 class="font-medium font-mont text-nightblue text-base uppercase">Research Collaboration</h2>
 
-            <h1 class="invisible">Collaboration Network</h1>
+            <h1 class="invisible">Research Collaboration</h1>
         </div>
         <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-5">
             @forelse ($members as $member)
@@ -14,7 +14,7 @@
                 <div class="relative">
                     <h3 class="font-quick font-medium text-nightblue">{{$member->name}}</h3>
                     <p class="text-midgray">{{$member->designation}}</p>
-                    <p class="flex items-center biotooltiptoggle"><span class="iconify mr-2" data-icon="iconoir:profile-circle" ></span> Bio</p>
+                    <p class="flex items-center biotooltiptoggle text-norblue"><span class="iconify mr-2" data-icon="iconoir:profile-circle" ></span> Bio</p>
                     <div class="absolute bg-white shadow p-4 rounded-md text-midgray w-[250px] text-sm biotooltip hidden z-50 right-2 sm:right-0">
                         <p >{{$member->bio}}</p>
                     </div>

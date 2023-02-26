@@ -16,7 +16,7 @@
             </div>
             <div class="bg-gray-50 px-4 py-3 text-right sm:px-6 flex justify-end">
                 <button type="submit"
-                    class="bg-nightblue px-2 py-1 rounded-md flex justify-center items-center text-white uppercase text-sm hover:bg-midgray">Save Experience</button>
+                    class="bg-nightblue px-2 py-1 rounded-md flex justify-center items-center text-white uppercase text-sm hover:bg-midgray">Save Image</button>
 
             </div>
         </div>

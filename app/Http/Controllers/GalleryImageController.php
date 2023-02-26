@@ -18,7 +18,7 @@ class GalleryImageController extends Controller
     public function index()
     {
         $images = GalleryImage::all();
-        return view('dashboard.galleries.index',compact('images'));
+        return view('dashboard.galleries.index', compact('images'));
     }
 
     /**
@@ -27,7 +27,6 @@ class GalleryImageController extends Controller
     public function create()
     {
         return view('dashboard.galleries.create');
-
     }
 
     /**
@@ -36,48 +35,24 @@ class GalleryImageController extends Controller
     public function store(StoreGalleryImageRequest $request)
     {
         $this->validate($request, [
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'image' => 'required|mimes:jpg,jpeg,png,jpg,gif,svg',
         ]);
 
-        if($request->hasFile('image')) {
-
-
-            $file = $request->file('image');
-            $filefullname = time().'.'.$file->getClientOriginalExtension();
-            $upload_path = 'gallery/';
-            $fileurl = $upload_path.$filefullname;
-            $success = $file->move($upload_path, $filefullname);
-
-            /**
-             * Generate Thumbnail Image Upload on Folder Code
-             */
-            // $image = Image::make($request->file('image'));
-            // $thumbimage = $image->resize(100,100);
-
-            // $thumbuploadpath = 'gallery/thumbnail/';
-            // $fileurl = $thumbuploadpath.$filefullname;
-
-            // $image->save($destinationPathThumbnail.$imageName);
-
-            // $file = $request->file('file');
-            // $filefullname = time().'.'.$file->getClientOriginalExtension();
-            // $upload_path = 'gallery/thumbnail/';
-            // $fileurl = $upload_path.$filefullname;
-            // $success = $file->move($upload_path, $filefullname);
-
-            // $success = $image->move($destinationPath, $imageName);
-
-
-            /**
-             * Write Code for Image Upload Here,
-             */
+        if ($request->hasFile('image')) {
 
             $galleryImage = new GalleryImage();
+
+            $file = $request->file('image');
+            $filefullname = time() . '.' . $file->getClientOriginalExtension();
+            $upload_path = 'gallery/';
+            $fileurl = $upload_path . $filefullname;
+            $success = $file->move($upload_path, $filefullname);
+
             $galleryImage->photo = $fileurl;
             $galleryImage->thumbnail = $fileurl;
             $galleryImage->save();
 
-            return Redirect::route('galleryImages.index')->with('success','Image Upload successful');
+            return Redirect::route('galleryImages.index')->with('success', 'Image Upload successful');
         }
 
         return back();
@@ -110,14 +85,14 @@ class GalleryImageController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy( $id)
+    public function destroy($id)
     {
         $image = GalleryImage::findOrFail($id);
-        if($image->photo) { unlink($image->photo); }
+        if ($image->photo) {
+            unlink($image->photo);
+        }
         $image->delete();
 
         return Redirect::route('galleryImages.index')->with('status', 'Image Deleted');
-
-
     }
 }

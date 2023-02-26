@@ -20,8 +20,8 @@
             <x-nav-link :href="route('about')" :active="request()->routeIs('about')">About</x-nav-link>
             <x-nav-link :href="route('publications')" :active="request()->routeIs('publications')">Publications</x-nav-link>
             <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">Projects</x-nav-link>
+            <x-nav-link :href="route('colaboration')" :active="request()->routeIs('colaboration')">Research Collaboration</x-nav-link>
             <x-nav-link :href="route('volunteerex')" :active="request()->routeIs('volunteerex')">Volunteering Experience </x-nav-link>
-            <x-nav-link :href="route('colaboration')" :active="request()->routeIs('colaboration')">Collaboration Network</x-nav-link>
         </div>
     </div>
 </nav>
