@@ -10,7 +10,7 @@
                 <div class="grid grid-cols-6 gap-6">
                     <div class="col-span-6 sm:col-span-6">
                         <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
-                        <textarea id="title" name="title" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm" placeholder="you@example.com"></textarea>
+                        <textarea id="title" name="title" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-nightblue focus:ring-nightblue sm:text-sm"></textarea>
                     </div>
 
                     <div class="col-span-6 sm:col-span-3">
