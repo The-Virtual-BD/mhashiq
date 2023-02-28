@@ -15,7 +15,7 @@
             <div class="bg-white p-5 shadow rounded-md text-nightblue font-medium mt-5">
                 <div class="flex justify-between items-center">
                     <div class="flex justify-start items-center gap-4">
-                        <div class="w-16 aspect-square rounded-full bg-contain bg-center bg-no-repeat" style="background-image: url('{{ asset($vexperience->logo) }}')">
+                        <div class="w-16 aspect-square rounded-full bg-contain bg-center bg-no-repeat" style="background-image: url('{{ asset($vexperience->logo) }}');min-width:96px !important;">
 
                         </div>
                         <div class="font-quick">

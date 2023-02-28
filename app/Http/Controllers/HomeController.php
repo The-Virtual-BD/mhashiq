@@ -56,7 +56,7 @@ class HomeController extends Controller
     }
     public function volunteerex() {
         $vexperiences = VolunteerExperience::all();
-        $images = GalleryImage::all();
+        $images = GalleryImage::paginate(8);
         return view('volunteerex',compact('vexperiences','images'));
     }
     public function colaboration() {

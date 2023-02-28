@@ -17,7 +17,7 @@
                     <p class="flex items-center biotooltiptoggle text-norblue"><span class="iconify mr-2" data-icon="iconoir:profile-circle" ></span> Bio</p>
 
 
-                    <div class="absolute bg-white shadow p-4 rounded-md text-midgray w-full h-full text-sm biotooltip hidden z-50 top-0 left-0 right-0 transition-all duration-150 ease-in-out">
+                    <div class="absolute bg-white shadow p-4 rounded-md text-midgray w-full min-h-full text-sm biotooltip hidden z-50 top-0 left-0 right-0 transition-all duration-150 ease-in-out">
                         <div class="closethispopup flex justify-end"><button class="font-bold text-nightblue bg-nightblue/20 rounded p-2"><span class="iconify" data-icon="ic:round-close"></span></button></div>
                         <div class="mt-4 p-1">
                             <div class="flex justify-center items-center flex-col">
