@@ -48,8 +48,9 @@
         <div class="mt-4" id="pagination">
             {!! $images->render() !!}
         </div>
-        <div class="aspect-video bg-nightblue shadow-xl hidden rounded-md bg-no-repeat bg-center bg-cover" id="imagepopup">
-            <div class="flex justify-end pt-2 pr-2"><span class="iconify bg-white/60 hover:bg-white text-nightblue hover:text-red-500 rounded p-2 text-4xl" data-icon="charm:cross" onclick="closepopup()"></span></div>
+        <div class=" overflow-hidden shadow-xl hidden rounded-md bg-no-repeat bg-center bg-cover relative" id="imagepopup">
+            <div class="flex justify-end pt-2 pr-2 absolute top-6 right-6"><span class="iconify bg-white/60 hover:bg-white text-nightblue hover:text-red-500 rounded p-2 text-4xl border border-nightblue" data-icon="charm:cross" onclick="closepopup()"></span></div>
+            <img src="" alt="" srcset="" class="w-full">
         </div>
     </div>
 
@@ -57,11 +58,9 @@
     <x-slot name="script">
         <script>
             function openImagepop(link) {
-                var url = "url('"+link+"')";
                 $('#gallerydiv').toggleClass('hidden').toggleClass('grid');
                 $('#gallerytitle,#pagination').toggleClass('hidden');
-
-                $('#imagepopup').css("background-image", url);
+                $('#imagepopup img').attr('src', link);
                 $('#imagepopup').toggleClass('hidden');
             }
 
@@ -69,8 +68,8 @@
                 var url = "url('')";
                 $('#gallerydiv').toggleClass('hidden').toggleClass('grid');
                 $('#gallerytitle,#pagination').toggleClass('hidden');
-
-                $('#imagepopup').css("background-image", url).toggleClass('hidden');
+                $('#imagepopup img').attr('src', '');
+                $('#imagepopup').toggleClass('hidden');
             }
         </script>
     </x-slot>
